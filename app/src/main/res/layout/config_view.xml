@@ -82,6 +82,8 @@
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipLaboral"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="@string/config_chip_work"
                     android:textColor="@color/white"
@@ -90,6 +92,8 @@
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipFinde"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/config_chip_weekend"
                     android:textColor="@color/ink_500"
                     app:chipBackgroundColor="@color/ink_100"
@@ -108,6 +112,8 @@
 
                 <com.google.android.material.chip.Chip
                     style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="@string/config_day_l"
                     android:textColor="@color/white"
@@ -115,6 +121,8 @@
 
                 <com.google.android.material.chip.Chip
                     style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="@string/config_day_m"
                     android:textColor="@color/white"
@@ -122,6 +130,8 @@
 
                 <com.google.android.material.chip.Chip
                     style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="@string/config_day_x"
                     android:textColor="@color/white"
@@ -129,6 +139,8 @@
 
                 <com.google.android.material.chip.Chip
                     style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="@string/config_day_j"
                     android:textColor="@color/white"
@@ -136,6 +148,8 @@
 
                 <com.google.android.material.chip.Chip
                     style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="@string/config_day_v"
                     android:textColor="@color/white"
@@ -143,6 +157,8 @@
 
                 <com.google.android.material.chip.Chip
                     style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/config_day_s"
                     android:textColor="@color/ink_400"
                     app:chipBackgroundColor="@color/white"
@@ -152,6 +168,8 @@
 
                 <com.google.android.material.chip.Chip
                     style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/config_day_d"
                     android:textColor="@color/ink_400"
                     app:chipBackgroundColor="@color/white"

@@ -32,40 +32,42 @@
                 android:id="@+id/homeDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Domingo 12 Oct"
+                android:text="@string/home_date_label"
                 android:textAllCaps="true"
                 android:letterSpacing="0.2"
                 android:textColor="@color/ink_500"
                 android:textSize="12sp"
-                android:fontFamily="@font/ibm_plex_sans_thin" />
+                app:fontFamily="@font/space_grotesk" />
 
             <TextView
                 android:id="@+id/homeGreeting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/space_grotesk_light"
-                android:textStyle="bold"
-                android:text="Buenos días"
+                android:text="@string/home_greeting"
                 android:textColor="@color/ink_900"
-                android:textSize="30sp" />
+                android:textSize="44sp"
+                android:letterSpacing="-0.02"
+                android:fontFamily="@font/space_grotesk_bold" />
 
             <TextView
                 android:id="@+id/homeWindowLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Ventana activa · 7:00 - 7:30"
+                android:text="@string/home_window_active"
                 android:textColor="@color/ink_500"
                 android:textSize="14sp"
-                android:fontFamily="@font/ibm_plex_sans_thin" />
+                android:letterSpacing="-0.02"
+                app:fontFamily="@font/space_grotesk" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/gaugeCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                app:cardElevation="6dp"
+                android:layout_marginTop="40dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="2dp"
                 app:cardCornerRadius="32dp"
                 app:strokeColor="@color/ink_200"
                 app:strokeWidth="1dp">
@@ -79,19 +81,14 @@
 
                     <FrameLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
 
-                        <com.google.android.material.progressindicator.CircularProgressIndicator
+                        <View
                             android:id="@+id/sleepQualityGauge"
-                            style="@style/Widget.MaterialComponents.CircularProgressIndicator"
                             android:layout_width="200dp"
                             android:layout_height="200dp"
-                            android:indeterminate="false"
-                            android:progress="85"
-                            app:indicatorColor="@color/success_500"
-                            app:indicatorDirectionCircular="clockwise"
-                            app:trackColor="@color/ink_200"
-                            app:trackThickness="12dp" />
+                            android:background="@drawable/bg_sleep_quality_ring" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -103,40 +100,66 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Calidad"
+                                android:text="@string/home_sleep_quality_label"
                                 android:textAllCaps="true"
                                 android:letterSpacing="0.2"
                                 android:textSize="12sp"
                                 android:textColor="@color/ink_500"
-                                android:fontFamily="@font/ibm_plex_sans_thin" />
+                                app:fontFamily="@font/space_grotesk" />
 
                             <TextView
                                 android:id="@+id/sleepQualityValue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
-                                android:text="85"
-                                android:textColor="@color/success_500"
-                                android:textSize="36sp"
-                                android:fontFamily="@font/space_grotesk_light"
-                                android:textStyle="bold" />
+                                android:text="@string/home_sleep_quality_value"
+                                android:textColor="@color/ink_900"
+                                android:textSize="48sp"
+                                android:textStyle="bold"
+                                android:letterSpacing="-0.02"
+                                app:fontFamily="@font/space_grotesk" />
                         </LinearLayout>
                     </FrameLayout>
 
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/windowMetChip"
-                        style="@style/Widget.MaterialComponents.Chip.Action"
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/windowMetCard"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Window Met · Sí"
-                        android:textColor="@color/white"
-                        app:chipBackgroundColor="@color/ink_900"
-                        app:chipIcon="@android:drawable/checkbox_on_background"
-                        app:chipIconTint="@color/white"
-                        app:chipIconVisible="true"
-                        app:chipMinHeight="36dp"
-                        tools:ignore="UseAppTint" />
+                        app:cardCornerRadius="999dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardUseCompatPadding="false"
+                        app:strokeColor="@color/ink_900"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginEnd="8dp"
+                                android:contentDescription="@string/home_window_met_status_desc"
+                                android:src="@drawable/ic_check_pill"
+                                android:tint="@color/ink_900" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_window_met_label"
+                                android:textColor="@color/ink_900"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:fontFamily="@font/space_grotesk" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -145,6 +168,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="2dp"
                 app:cardCornerRadius="32dp"
                 app:strokeColor="@color/ink_200"
                 app:strokeWidth="1dp">
@@ -165,16 +190,18 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Smart Alarm"
+                            android:text="@string/home_smart_alarm_title"
                             android:textColor="@color/ink_500"
                             android:textSize="12sp"
-                            android:fontFamily="@font/ibm_plex_sans_thin" />
+                            app:fontFamily="@font/space_grotesk" />
 
                         <com.google.android.material.switchmaterial.SwitchMaterial
                             android:id="@+id/smartAlarmSwitch"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:checked="true"
+                            app:thumbTint="@color/switch_thumb_tint"
+                            app:trackTint="@color/switch_track_tint"
                             app:useMaterialThemeColors="true" />
                     </LinearLayout>
 
@@ -183,20 +210,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="7:00 - 7:30 AM"
+                        android:text="@string/home_alarm_window"
                         android:textColor="@color/ink_900"
-                        android:textSize="30sp"
-                        android:fontFamily="@font/space_grotesk_light"
-                        android:textStyle="bold" />
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="-0.01"
+                        app:fontFamily="@font/space_grotesk" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Próxima alarma inteligente"
+                        android:text="@string/home_next_alarm_hint"
                         android:textColor="@color/ink_500"
                         android:textSize="14sp"
-                        android:fontFamily="@font/ibm_plex_sans_thin" />
+                        android:letterSpacing="-0.01"
+                        app:fontFamily="@font/space_grotesk" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -209,69 +238,135 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Límite absoluto"
+                            android:text="@string/home_absolute_limit_label"
                             android:textColor="@color/ink_500"
                             android:textSize="12sp"
-                            android:fontFamily="@font/ibm_plex_sans_thin" />
+                            app:fontFamily="@font/space_grotesk" />
 
                         <TextView
                             android:id="@+id/absoluteLimit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="7:30 AM"
+                            android:text="@string/home_absolute_limit_value"
                             android:textColor="@color/ink_700"
-                            android:textStyle="bold"
                             android:textSize="18sp"
-                            android:fontFamily="@font/ibm_plex_sans_thin" />
+                            android:textStyle="bold"
+                            app:fontFamily="@font/space_grotesk" />
                     </LinearLayout>
 
-                    <com.google.android.material.chip.ChipGroup
-                        android:id="@+id/statusChipGroup"
+                    <LinearLayout
+                        android:id="@+id/statusRow"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        app:chipSpacing="8dp">
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
 
-                        <com.google.android.material.chip.Chip
-                            style="@style/Widget.MaterialComponents.Chip.Action"
-                            android:text="Sensores · OK"
-                            android:textColor="@color/sky_500"
-                            android:fontFamily="@font/ibm_plex_sans_thin"
-                            android:textSize="12sp"
-                            app:chipBackgroundColor="@color/sky_100"
-                            app:chipStrokeColor="@color/sky_500"
-                            app:chipStrokeWidth="1dp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
 
-                        <com.google.android.material.chip.Chip
-                            style="@style/Widget.MaterialComponents.Chip.Action"
-                            android:text="Batería · 92%"
-                            android:textColor="@color/success_500"
-                            android:fontFamily="@font/ibm_plex_sans_thin"
-                            android:textSize="12sp"
-                            app:chipBackgroundColor="@color/success_100"
-                            app:chipStrokeColor="@color/success_500"
-                            app:chipStrokeWidth="1dp" />
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="999dp"
+                                app:strokeColor="@color/sky_500"
+                                app:strokeWidth="1dp">
 
-                        <com.google.android.material.chip.Chip
-                            style="@style/Widget.MaterialComponents.Chip.Action"
-                            android:text="Ventana · 7:00-7:30"
-                            android:textColor="@color/amber_400"
-                            android:fontFamily="@font/ibm_plex_sans_thin"
-                            android:textSize="12sp"
-                            app:chipBackgroundColor="@color/amber_100"
-                            app:chipStrokeColor="@color/amber_400"
-                            app:chipStrokeWidth="1dp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="12dp"
+                                    android:paddingVertical="8dp"
+                                    android:text="@string/home_status_sensors"
+                                    android:textColor="@color/sky_500"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="@font/space_grotesk" />
+                            </com.google.android.material.card.MaterialCardView>
 
-                        <com.google.android.material.chip.Chip
-                            style="@style/Widget.MaterialComponents.Chip.Action"
-                            android:text="Window Met · Sí"
-                            android:textColor="@color/ink_900"
-                            android:fontFamily="@font/ibm_plex_sans_thin"
-                            android:textSize="12sp"
-                            app:chipBackgroundColor="@color/ink_200"
-                            app:chipStrokeColor="@color/ink_900"
-                            app:chipStrokeWidth="1dp" />
-                    </com.google.android.material.chip.ChipGroup>
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="999dp"
+                                app:strokeColor="@color/success_500"
+                                app:strokeWidth="1dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="12dp"
+                                    android:paddingVertical="8dp"
+                                    android:text="@string/home_status_battery"
+                                    android:textColor="@color/success_500"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="@font/space_grotesk" />
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="999dp"
+                                app:strokeColor="@color/amber_400"
+                                app:strokeWidth="1dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="12dp"
+                                    android:paddingVertical="8dp"
+                                    android:text="@string/home_status_window"
+                                    android:textColor="@color/amber_400"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="@font/space_grotesk" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="999dp"
+                                app:strokeColor="@color/ink_900"
+                                app:strokeWidth="1dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="12dp"
+                                    android:paddingVertical="8dp"
+                                    android:text="@string/home_status_window_met"
+                                    android:textColor="@color/ink_900"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="@font/space_grotesk" />
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -281,24 +376,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="Configurar ventana"
+                android:text="@string/home_configure_window"
                 android:textAllCaps="false"
                 android:textSize="14sp"
-                android:fontFamily="@font/ibm_plex_sans_thin"
-                android:textColor="@color/ink_800"
-                app:strokeColor="@color/ink_300" />
+                android:textColor="@color/ink_900"
+                android:backgroundTint="@color/white"
+                app:cornerRadius="24dp"
+                app:fontFamily="@font/space_grotesk"
+                app:strokeColor="@color/ink_200"
+                app:strokeWidth="2dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/sleepModeButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="Modo Sueño"
+                android:text="@string/home_sleep_mode"
                 android:textAllCaps="false"
                 android:textSize="14sp"
-                android:fontFamily="@font/ibm_plex_sans_thin"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/ink_900" />
+                android:backgroundTint="@color/ink_900"
+                app:cornerRadius="24dp"
+                app:fontFamily="@font/space_grotesk" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
