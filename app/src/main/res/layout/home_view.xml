@@ -37,17 +37,18 @@
                 android:letterSpacing="0.2"
                 android:textColor="@color/ink_500"
                 android:textSize="12sp"
-                android:fontFamily="sans-serif-medium" />
+                android:fontFamily="@font/ibm_plex_sans_thin" />
 
             <TextView
                 android:id="@+id/homeGreeting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/space_grotesk_light"
+                android:textStyle="bold"
                 android:text="Buenos días"
                 android:textColor="@color/ink_900"
-                android:textSize="28sp"
-                android:fontFamily="sans-serif-medium" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/homeWindowLabel"
@@ -57,7 +58,7 @@
                 android:text="Ventana activa · 7:00 - 7:30"
                 android:textColor="@color/ink_500"
                 android:textSize="14sp"
-                android:fontFamily="sans-serif" />
+                android:fontFamily="@font/ibm_plex_sans_thin" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/gaugeCard"
@@ -106,7 +107,8 @@
                                 android:textAllCaps="true"
                                 android:letterSpacing="0.2"
                                 android:textSize="12sp"
-                                android:textColor="@color/ink_500" />
+                                android:textColor="@color/ink_500"
+                                android:fontFamily="@font/ibm_plex_sans_thin" />
 
                             <TextView
                                 android:id="@+id/sleepQualityValue"
@@ -115,14 +117,15 @@
                                 android:layout_marginTop="4dp"
                                 android:text="85"
                                 android:textColor="@color/success_500"
-                                android:textSize="42sp"
-                                android:fontFamily="sans-serif-medium" />
+                                android:textSize="36sp"
+                                android:fontFamily="@font/space_grotesk_light"
+                                android:textStyle="bold" />
                         </LinearLayout>
                     </FrameLayout>
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/windowMetChip"
-                        style="@style/Widget.MaterialComponents.Chip.Assist"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
@@ -165,7 +168,7 @@
                             android:text="Smart Alarm"
                             android:textColor="@color/ink_500"
                             android:textSize="12sp"
-                            android:fontFamily="sans-serif-medium" />
+                            android:fontFamily="@font/ibm_plex_sans_thin" />
 
                         <com.google.android.material.switchmaterial.SwitchMaterial
                             android:id="@+id/smartAlarmSwitch"
@@ -182,8 +185,9 @@
                         android:layout_marginTop="16dp"
                         android:text="7:00 - 7:30 AM"
                         android:textColor="@color/ink_900"
-                        android:textSize="28sp"
-                        android:fontFamily="sans-serif-medium" />
+                        android:textSize="30sp"
+                        android:fontFamily="@font/space_grotesk_light"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -191,14 +195,15 @@
                         android:layout_marginTop="4dp"
                         android:text="Próxima alarma inteligente"
                         android:textColor="@color/ink_500"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        android:fontFamily="@font/ibm_plex_sans_thin" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:orientation="horizontal"
-                        android:gravity="space_between">
+                        android:gravity="center_vertical">
 
                         <TextView
                             android:layout_width="0dp"
@@ -206,7 +211,8 @@
                             android:layout_weight="1"
                             android:text="Límite absoluto"
                             android:textColor="@color/ink_500"
-                            android:textSize="12sp" />
+                            android:textSize="12sp"
+                            android:fontFamily="@font/ibm_plex_sans_thin" />
 
                         <TextView
                             android:id="@+id/absoluteLimit"
@@ -215,7 +221,8 @@
                             android:text="7:30 AM"
                             android:textColor="@color/ink_700"
                             android:textStyle="bold"
-                            android:textSize="14sp" />
+                            android:textSize="18sp"
+                            android:fontFamily="@font/ibm_plex_sans_thin" />
                     </LinearLayout>
 
                     <com.google.android.material.chip.ChipGroup
@@ -223,37 +230,44 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:chipSpacing="8dp"
-                        android:rowCount="2">
+                        app:chipSpacing="8dp">
 
                         <com.google.android.material.chip.Chip
-                            style="@style/Widget.MaterialComponents.Chip.Assist"
+                            style="@style/Widget.MaterialComponents.Chip.Action"
                             android:text="Sensores · OK"
                             android:textColor="@color/sky_500"
+                            android:fontFamily="@font/ibm_plex_sans_thin"
+                            android:textSize="12sp"
                             app:chipBackgroundColor="@color/sky_100"
                             app:chipStrokeColor="@color/sky_500"
                             app:chipStrokeWidth="1dp" />
 
                         <com.google.android.material.chip.Chip
-                            style="@style/Widget.MaterialComponents.Chip.Assist"
+                            style="@style/Widget.MaterialComponents.Chip.Action"
                             android:text="Batería · 92%"
                             android:textColor="@color/success_500"
+                            android:fontFamily="@font/ibm_plex_sans_thin"
+                            android:textSize="12sp"
                             app:chipBackgroundColor="@color/success_100"
                             app:chipStrokeColor="@color/success_500"
                             app:chipStrokeWidth="1dp" />
 
                         <com.google.android.material.chip.Chip
-                            style="@style/Widget.MaterialComponents.Chip.Assist"
+                            style="@style/Widget.MaterialComponents.Chip.Action"
                             android:text="Ventana · 7:00-7:30"
                             android:textColor="@color/amber_400"
+                            android:fontFamily="@font/ibm_plex_sans_thin"
+                            android:textSize="12sp"
                             app:chipBackgroundColor="@color/amber_100"
                             app:chipStrokeColor="@color/amber_400"
                             app:chipStrokeWidth="1dp" />
 
                         <com.google.android.material.chip.Chip
-                            style="@style/Widget.MaterialComponents.Chip.Assist"
+                            style="@style/Widget.MaterialComponents.Chip.Action"
                             android:text="Window Met · Sí"
                             android:textColor="@color/ink_900"
+                            android:fontFamily="@font/ibm_plex_sans_thin"
+                            android:textSize="12sp"
                             app:chipBackgroundColor="@color/ink_200"
                             app:chipStrokeColor="@color/ink_900"
                             app:chipStrokeWidth="1dp" />
@@ -269,6 +283,8 @@
                 android:layout_marginTop="24dp"
                 android:text="Configurar ventana"
                 android:textAllCaps="false"
+                android:textSize="14sp"
+                android:fontFamily="@font/ibm_plex_sans_thin"
                 android:textColor="@color/ink_800"
                 app:strokeColor="@color/ink_300" />
 
@@ -279,6 +295,8 @@
                 android:layout_marginTop="12dp"
                 android:text="Modo Sueño"
                 android:textAllCaps="false"
+                android:textSize="14sp"
+                android:fontFamily="@font/ibm_plex_sans_thin"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/ink_900" />
         </LinearLayout>

@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">Alarma Ciclos Circadianos</string>
+
+    <!-- Config screen -->
+    <string name="config_back">Volver</string>
+    <string name="config_title">Configurar ventana</string>
+    <string name="config_menu_placeholder">···</string>
+    <string name="config_chip_work">Laboral</string>
+    <string name="config_chip_weekend">Finde</string>
+    <string name="config_day_l">L</string>
+    <string name="config_day_m">M</string>
+    <string name="config_day_x">X</string>
+    <string name="config_day_j">J</string>
+    <string name="config_day_v">V</string>
+    <string name="config_day_s">S</string>
+    <string name="config_day_d">D</string>
+    <string name="config_window_range">7:00 - 7:30</string>
+    <string name="config_window_helper">Despertaremos en fase de sueño ligero</string>
+    <string name="config_slider_start">7:00</string>
+    <string name="config_slider_end">7:30</string>
+    <string name="config_limit_section">Hora límite</string>
+    <string name="config_limit_label">Tope</string>
+    <string name="config_toggle_alarm">Alarma progresiva</string>
+    <string name="config_toggle_alarm_desc">0-100% · 5 min</string>
+    <string name="config_toggle_snooze">Snooze inteligente</string>
+    <string name="config_toggle_snooze_desc">Duración: 5 min</string>
+    <string name="action_save">Guardar</string>
+    <string name="action_go_sleep_mode">Ir a Modo Sueño</string>
 </resources>

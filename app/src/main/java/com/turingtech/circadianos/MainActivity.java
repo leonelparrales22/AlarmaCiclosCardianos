@@ -1,4 +1,4 @@
-package com.example.alarmacicloscircadianos;
+package com.turingtech.circadianos;
 
 import android.os.Bundle;
 

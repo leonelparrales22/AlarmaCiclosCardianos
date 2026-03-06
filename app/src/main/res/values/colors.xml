@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Ink scale -->
+    <!-- Ink scale (Tailwind ink) -->
     <color name="ink_900">#111827</color>
     <color name="ink_800">#1F2937</color>
     <color name="ink_700">#374151</color>
@@ -11,7 +11,7 @@
     <color name="ink_200">#E5E7EB</color>
     <color name="ink_100">#F3F4F6</color>
 
-    <!-- Accent palettes -->
+    <!-- Accent families -->
     <color name="sky_500">#38BDF8</color>
     <color name="sky_100">#ECFEFF</color>
 
@@ -19,17 +19,15 @@
     <color name="amber_100">#FEF3C7</color>
 
     <color name="success_500">#10B981</color>
+    <color name="success_accent">#6EE7B7</color>
     <color name="success_100">#E1F8EF</color>
 
     <color name="alert_500">#F87171</color>
     <color name="alert_100">#FEE2E2</color>
 
-    <!-- Utility tones -->
-    <color name="ink_glow_overlay">#40111827</color>
-    <color name="success_glow_overlay">#5910B981</color>
-    <color name="sky_glow_overlay">#5938BDF8</color>
-    <color name="amber_glow_overlay">#59FBBF24</color>
-
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Utility -->
+    <color name="shadow_frame">#2E0F172A</color>
+    <color name="pure_black">#FF000000</color>
+    <color name="pure_white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
 </resources>
