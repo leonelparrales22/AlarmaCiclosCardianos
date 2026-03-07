@@ -189,14 +189,17 @@
                             android:textSize="14sp"
                             app:fontFamily="@font/ibm_plex_sans" />
 
-                        <com.google.android.material.switchmaterial.SwitchMaterial
+                        <com.google.android.material.materialswitch.MaterialSwitch
                             android:id="@+id/smartAlarmSwitch"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="16dp"
                             android:checked="true"
+                            android:layoutDirection="ltr"
                             android:showText="false"
-                            app:thumbTint="@color/switch_thumb_tint"
-                            app:trackTint="@color/switch_track_tint"
+                            android:minHeight="0dp"
+                            app:thumbTint="@color/white"
+                            app:trackColor="@color/ink_900"
                             app:useMaterialThemeColors="false" />
                     </LinearLayout>
 
@@ -339,6 +342,98 @@
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_chip_window"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="8dp">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginEnd="6dp"
+                                android:src="@drawable/ic_status_window"
+                                android:contentDescription="@string/home_status_window_label" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/home_status_window_label"
+                                    android:textColor="@color/amber_400"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="@font/ibm_plex_sans" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/home_status_window_value"
+                                    android:textColor="@color/ink_500"
+                                    android:textSize="11sp"
+                                    app:fontFamily="@font/ibm_plex_sans" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_window_met_chip"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="8dp">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginEnd="6dp"
+                                android:src="@drawable/ic_check_pill"
+                                android:tint="@color/ink_900"
+                                android:contentDescription="@string/home_status_window_met_label" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/home_status_window_met_label"
+                                    android:textColor="@color/ink_900"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="@font/ibm_plex_sans" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/home_status_window_met_value"
+                                    android:textColor="@color/ink_500"
+                                    android:textSize="11sp"
+                                    app:fontFamily="@font/ibm_plex_sans" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -347,13 +442,13 @@
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/home_configure_window"
                 android:textAllCaps="false"
                 android:textSize="14sp"
                 android:textColor="@color/ink_900"
                 android:backgroundTint="@color/white"
-                app:cornerRadius="24dp"
+                app:cornerRadius="16dp"
                 app:fontFamily="@font/ibm_plex_sans"
                 app:strokeColor="@color/ink_200"
                 app:strokeWidth="2dp" />
@@ -362,13 +457,13 @@
                 android:id="@+id/sleepModeButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/home_sleep_mode"
                 android:textAllCaps="false"
                 android:textSize="14sp"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/ink_900"
-                app:cornerRadius="24dp"
+                app:cornerRadius="16dp"
                 app:fontFamily="@font/ibm_plex_sans" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
