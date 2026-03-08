@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AlarmaCiclosCircadianos">
+        <activity android:name=".ui.alarm.SmartAlarmActivity" />
+        <activity android:name=".ui.sleep.SleepActivity" />
         <activity android:name=".ui.config.ConfigActivity" />
 
         <activity

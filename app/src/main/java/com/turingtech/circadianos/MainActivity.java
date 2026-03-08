@@ -2,16 +2,12 @@ package com.turingtech.circadianos;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.turingtech.circadianos.ui.config.ConfigActivity;
+import com.turingtech.circadianos.ui.sleep.SleepActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,12 +17,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.home_view);
 
         MaterialButton configureWindowButton = findViewById(R.id.configureWindowButton);
-        configureWindowButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ConfigActivity.class);
-                startActivity(intent);
-            }
-        });
+        MaterialButton sleepModeButton = findViewById(R.id.sleepModeButton);
+
+        configureWindowButton.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, ConfigActivity.class)));
+
+        sleepModeButton.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, SleepActivity.class)));
     }
 }

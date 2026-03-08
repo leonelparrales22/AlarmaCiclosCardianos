@@ -27,6 +27,36 @@
     <string name="action_save">Guardar</string>
     <string name="action_go_sleep_mode">Ir a Modo Sueño</string>
 
+    <!-- Sleep mode screen -->
+    <string name="sleep_title">Modo Sueño</string>
+    <string name="sleep_menu_placeholder">◦</string>
+    <string name="sleep_time_label">11:43 pm</string>
+    <string name="sleep_status_hint">Monitorizando...</string>
+    <string name="sleep_device_phone_label">Phone</string>
+    <string name="sleep_device_phone_value">95% · Cargando</string>
+    <string name="sleep_device_watch_label">Watch</string>
+    <string name="sleep_device_watch_value">Conectado</string>
+    <string name="sleep_device_battery_label">Batería</string>
+    <string name="sleep_device_battery_value">25%</string>
+    <string name="sleep_card_menu">···</string>
+    <string name="sleep_warning_message">Conecta el cargador para iniciar monitoreo</string>
+    <string name="sleep_warning_action">Revisar permisos</string>
+    <string name="sleep_pause_button">Pausar / Detener</string>
+    <string name="sleep_wake_now_button">Despertar ahora</string>
+
+    <!-- Smart alarm screen -->
+    <string name="smart_alarm_title">Smart Alarm</string>
+    <string name="smart_alarm_time">7:12 AM</string>
+    <string name="smart_alarm_subtitle">Es hora de despertar</string>
+    <string name="smart_alarm_window_hint">Dentro de tu ventana · 7:00-7:30</string>
+    <string name="smart_alarm_audio_title">Audio progresivo</string>
+    <string name="smart_alarm_audio_status">Subiendo</string>
+    <string name="smart_alarm_audio_percentage">40%</string>
+    <string name="smart_alarm_snooze_indicator">○</string>
+    <string name="smart_alarm_snooze_title">Snooze inteligente (recomendado)</string>
+    <string name="smart_alarm_snooze_desc">Explicación: extendemos la ventana 5 min estratégicamente según tu ciclo actual.</string>
+    <string name="smart_alarm_slide_action">Desliza para apagar ▷</string>
+
     <!-- Home screen -->
     <string name="home_date_label">Domingo 12 Oct</string>
     <string name="home_greeting">Buenos días</string>
