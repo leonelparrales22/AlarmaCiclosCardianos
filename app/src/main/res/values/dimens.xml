@@ -16,6 +16,10 @@
     <dimen name="radius_button">20dp</dimen>
     <dimen name="radius_chip">16dp</dimen>
     <dimen name="radius_chip_pill">999dp</dimen>
+    <dimen name="config_chip_height">36dp</dimen>
+    <dimen name="config_chip_padding_horizontal">20dp</dimen>
+    <dimen name="config_chip_spacing">8dp</dimen>
+    <dimen name="config_day_size">44dp</dimen>
 
     <dimen name="button_height_large">56dp</dimen>
     <dimen name="status_card_padding_vertical">16dp</dimen>
@@ -34,6 +38,7 @@
     <dimen name="warning_icon_size">32dp</dimen>
     <dimen name="sleep_moon_size">64dp</dimen>
     <dimen name="stroke_width_hairline">1dp</dimen>
+    <dimen name="stroke_width_medium">2dp</dimen>
 
     <dimen name="sleep_status_row_spacing">12dp</dimen>
     <dimen name="sleep_button_spacing">12dp</dimen>
@@ -47,6 +52,21 @@
     <dimen name="alarm_chip_padding_vertical">6dp</dimen>
     <dimen name="alarm_card_spacing">20dp</dimen>
     <dimen name="alarm_slide_height">60dp</dimen>
+    <dimen name="config_card_padding">20dp</dimen>
+    <dimen name="config_card_radius">24dp</dimen>
+    <dimen name="config_button_height">52dp</dimen>
+    <dimen name="config_button_radius">24dp</dimen>
+    <dimen name="config_slider_track_height">4dp</dimen>
+    <dimen name="config_limit_inner_padding_vertical">10dp</dimen>
+
+    <dimen name="summary_gauge_size">220dp</dimen>
+    <dimen name="summary_card_padding">20dp</dimen>
+    <dimen name="summary_motion_chart_height">96dp</dimen>
+    <dimen name="summary_emotion_button_size">56dp</dimen>
+    <dimen name="summary_emotion_gap">12dp</dimen>
+    <dimen name="summary_chip_padding_horizontal">12dp</dimen>
+    <dimen name="summary_chip_padding_vertical">6dp</dimen>
+    <dimen name="summary_section_spacing">24dp</dimen>
 
     <dimen name="text_size_sleep_title">20sp</dimen>
     <dimen name="text_size_sleep_time">34sp</dimen>
@@ -61,4 +81,10 @@
     <dimen name="text_size_alarm_time">48sp</dimen>
     <dimen name="text_size_alarm_title">18sp</dimen>
     <dimen name="text_size_alarm_indicator">16sp</dimen>
+    <dimen name="text_size_summary_header">12sp</dimen>
+    <dimen name="text_size_summary_gauge_value">40sp</dimen>
+    <dimen name="text_size_summary_energy">14sp</dimen>
+    <dimen name="text_size_emotion_icon">24sp</dimen>
+    <dimen name="text_size_chip_label">12sp</dimen>
+    <dimen name="text_size_limit_value">24sp</dimen>
 </resources>

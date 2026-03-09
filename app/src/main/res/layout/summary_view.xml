@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.summary.SummaryActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/summaryScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingStart="@dimen/padding_screen_horizontal"
+        android:paddingEnd="@dimen/padding_screen_horizontal"
+        android:paddingTop="@dimen/padding_screen_vertical"
+        android:paddingBottom="@dimen/padding_screen_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/summaryHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:letterSpacing="0.2"
+                android:text="@string/summary_header"
+                android:textAllCaps="true"
+                android:textColor="@color/ink_500"
+                android:textSize="@dimen/text_size_summary_header"
+                android:fontFamily="@font/ibm_plex_sans" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_section_large"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="@dimen/summary_gauge_size"
+                    android:layout_height="@dimen/summary_gauge_size">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_sleep_quality_ring" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summary_gauge_label"
+                            android:textAllCaps="true"
+                            android:textColor="@color/ink_500"
+                            android:textSize="@dimen/text_size_summary_header"
+                            android:letterSpacing="0.2"
+                            android:fontFamily="@font/ibm_plex_sans" />
+
+                        <TextView
+                            android:id="@+id/summaryGaugeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summary_gauge_score"
+                            android:textColor="@color/ink_900"
+                            android:textSize="@dimen/text_size_summary_gauge_value"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/space_grotesk" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/summaryEnergy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_section_small"
+                    android:text="@string/summary_energy_hint"
+                    android:textColor="@color/ink_500"
+                    android:textSize="@dimen/text_size_summary_energy"
+                    android:fontFamily="@font/ibm_plex_sans" />
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/motionCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_section_large"
+                app:cardCornerRadius="@dimen/radius_card_large"
+                app:strokeColor="@color/ink_200"
+                app:strokeWidth="@dimen/stroke_width_hairline"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/summary_card_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/summary_motion_title"
+                            android:textColor="@color/ink_500"
+                            android:textSize="@dimen/text_size_sleep_hint"
+                            android:fontFamily="@font/ibm_plex_sans" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summary_motion_value"
+                            android:textColor="@color/ink_500"
+                            android:textSize="@dimen/text_size_sleep_hint"
+                            android:fontFamily="@font/ibm_plex_sans" />
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_section_small"
+                        app:cardCornerRadius="@dimen/radius_card_medium"
+                        app:strokeColor="@color/ink_200"
+                        app:strokeWidth="@dimen/stroke_width_hairline"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/summary_motion_chart_height"
+                            android:contentDescription="@string/summary_motion_title"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_summary_motion_graph" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_section_tiny"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="@string/summary_motion_time_start"
+                            android:textColor="@color/ink_500"
+                            android:textSize="@dimen/text_size_status_label"
+                            android:fontFamily="@font/ibm_plex_sans" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/summary_motion_time_mid"
+                            android:textColor="@color/ink_500"
+                            android:textSize="@dimen/text_size_status_label"
+                            android:fontFamily="@font/ibm_plex_sans" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="@string/summary_motion_time_end"
+                            android:textColor="@color/ink_500"
+                            android:textSize="@dimen/text_size_status_label"
+                            android:fontFamily="@font/ibm_plex_sans" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/emotionSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/summary_section_spacing"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/summary_question_feel"
+                    android:textColor="@color/ink_900"
+                    android:textSize="@dimen/text_size_sleep_hint"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/ibm_plex_sans" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_section_small"
+                    app:cardCornerRadius="@dimen/radius_card_medium"
+                    app:strokeColor="@color/ink_200"
+                    app:strokeWidth="@dimen/stroke_width_hairline"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/summary_card_padding"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/summary_emotion_button_size"
+                            android:layout_marginEnd="@dimen/summary_emotion_gap"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_emotion_sleep"
+                            android:gravity="center"
+                            android:text="@string/summary_emotion_sleep"
+                            android:textColor="@color/emotion_sleep_text"
+                            android:textSize="@dimen/text_size_emotion_icon"
+                            android:fontFamily="@font/space_grotesk" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/summary_emotion_button_size"
+                            android:layout_marginEnd="@dimen/summary_emotion_gap"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_emotion_neutral"
+                            android:gravity="center"
+                            android:text="@string/summary_emotion_neutral"
+                            android:textColor="@color/emotion_neutral_text"
+                            android:textSize="@dimen/text_size_emotion_icon"
+                            android:fontFamily="@font/space_grotesk" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/summary_emotion_button_size"
+                            android:layout_marginEnd="@dimen/summary_emotion_gap"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_emotion_focus"
+                            android:gravity="center"
+                            android:text="@string/summary_emotion_focus"
+                            android:textColor="@color/emotion_focus_text"
+                            android:textSize="@dimen/text_size_emotion_icon"
+                            android:fontFamily="@font/space_grotesk" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/summary_emotion_button_size"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_emotion_happy"
+                            android:gravity="center"
+                            android:text="@string/summary_emotion_happy"
+                            android:textColor="@color/emotion_happy_text"
+                            android:textSize="@dimen/text_size_emotion_icon"
+                            android:fontFamily="@font/space_grotesk" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/coffeeCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/summary_section_spacing"
+                app:cardCornerRadius="@dimen/radius_card_medium"
+                app:strokeColor="@color/ink_200"
+                app:strokeWidth="@dimen/stroke_width_hairline"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/summary_card_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/summary_question_coffee"
+                            android:textColor="@color/ink_900"
+                            android:textSize="@dimen/text_size_sleep_hint"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/ibm_plex_sans" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_summary_chip_inactive"
+                                android:paddingStart="@dimen/summary_chip_padding_horizontal"
+                                android:paddingEnd="@dimen/summary_chip_padding_horizontal"
+                                android:paddingTop="@dimen/summary_chip_padding_vertical"
+                                android:paddingBottom="@dimen/summary_chip_padding_vertical"
+                                android:text="@string/summary_choice_no"
+                                android:textColor="@color/ink_900"
+                                android:textSize="@dimen/text_size_status_label"
+                                android:fontFamily="@font/ibm_plex_sans" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/spacing_section_small"
+                                android:background="@drawable/bg_summary_chip_active"
+                                android:paddingStart="@dimen/summary_chip_padding_horizontal"
+                                android:paddingEnd="@dimen/summary_chip_padding_horizontal"
+                                android:paddingTop="@dimen/summary_chip_padding_vertical"
+                                android:paddingBottom="@dimen/summary_chip_padding_vertical"
+                                android:text="@string/summary_choice_yes"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_status_label"
+                                android:fontFamily="@font/ibm_plex_sans" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_section_tiny"
+                        android:text="@string/summary_coffee_hint"
+                        android:textColor="@color/ink_500"
+                        android:textSize="@dimen/text_size_status_label"
+                        android:fontFamily="@font/ibm_plex_sans" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/summaryDoneButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/summary_section_spacing"
+                android:text="@string/summary_button_done"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_button"
+                android:backgroundTint="@color/ink_900"
+                app:cornerRadius="@dimen/radius_card_medium"
+                android:fontFamily="@font/ibm_plex_sans" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

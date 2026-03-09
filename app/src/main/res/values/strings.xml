@@ -57,6 +57,27 @@
     <string name="smart_alarm_snooze_desc">Explicación: extendemos la ventana 5 min estratégicamente según tu ciclo actual.</string>
     <string name="smart_alarm_slide_action">Desliza para apagar ▷</string>
 
+    <!-- Summary screen -->
+    <string name="summary_header">Resumen del descanso</string>
+    <string name="summary_gauge_label">Calidad</string>
+    <string name="summary_gauge_score">85</string>
+    <string name="summary_energy_hint">Energía: Alta</string>
+    <string name="summary_motion_title">Movimiento nocturno</string>
+    <string name="summary_motion_value">Bajo</string>
+    <string name="summary_motion_time_start">00:00</string>
+    <string name="summary_motion_time_mid">04:00</string>
+    <string name="summary_motion_time_end">07:00</string>
+    <string name="summary_question_feel">¿Despertaste bien?</string>
+    <string name="summary_emotion_sleep">😴</string>
+    <string name="summary_emotion_neutral">😐</string>
+    <string name="summary_emotion_focus">🙂</string>
+    <string name="summary_emotion_happy">😄</string>
+    <string name="summary_question_coffee">¿Café ayer?</string>
+    <string name="summary_coffee_hint">Seleccione si tomó café el día de ayer.</string>
+    <string name="summary_choice_no">No</string>
+    <string name="summary_choice_yes">Sí</string>
+    <string name="summary_button_done">Listo</string>
+
     <!-- Home screen -->
     <string name="home_date_label">Domingo 12 Oct</string>
     <string name="home_greeting">Buenos días</string>

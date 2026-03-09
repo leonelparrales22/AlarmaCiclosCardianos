@@ -1,7 +1,7 @@
 package com.turingtech.circadianos.ui.alarm;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 import com.turingtech.circadianos.R;
+import com.turingtech.circadianos.ui.summary.SummaryActivity;
 
 public class SmartAlarmActivity extends AppCompatActivity {
 
@@ -20,9 +21,11 @@ public class SmartAlarmActivity extends AppCompatActivity {
         ImageButton backButton = findViewById(R.id.alarmBackButton);
         MaterialButton slideButton = findViewById(R.id.slideToOffButton);
 
-        View.OnClickListener closeListener = v -> finish();
-
-        backButton.setOnClickListener(closeListener);
-        slideButton.setOnClickListener(closeListener);
+        backButton.setOnClickListener(v -> finish());
+        slideButton.setOnClickListener(v -> {
+            Intent summaryIntent = new Intent(SmartAlarmActivity.this, SummaryActivity.class);
+            startActivity(summaryIntent);
+            finish();
+        });
     }
 }
