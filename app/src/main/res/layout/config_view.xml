@@ -111,14 +111,6 @@
                     android:layout_height="@dimen/config_day_size"
                     android:background="@drawable/bg_day_active">
 
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="start|center_vertical"
-                        android:layout_marginStart="6dp"
-                        android:src="@drawable/ic_check_pill"
-                        android:tint="@color/white" />
-
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -134,14 +126,6 @@
                     android:layout_height="@dimen/config_day_size"
                     android:layout_marginStart="@dimen/config_chip_spacing"
                     android:background="@drawable/bg_day_active">
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="start|center_vertical"
-                        android:layout_marginStart="6dp"
-                        android:src="@drawable/ic_check_pill"
-                        android:tint="@color/white" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -159,14 +143,6 @@
                     android:layout_marginStart="@dimen/config_chip_spacing"
                     android:background="@drawable/bg_day_active">
 
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="start|center_vertical"
-                        android:layout_marginStart="6dp"
-                        android:src="@drawable/ic_check_pill"
-                        android:tint="@color/white" />
-
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -183,14 +159,6 @@
                     android:layout_marginStart="@dimen/config_chip_spacing"
                     android:background="@drawable/bg_day_active">
 
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="start|center_vertical"
-                        android:layout_marginStart="6dp"
-                        android:src="@drawable/ic_check_pill"
-                        android:tint="@color/white" />
-
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -206,14 +174,6 @@
                     android:layout_height="@dimen/config_day_size"
                     android:layout_marginStart="@dimen/config_chip_spacing"
                     android:background="@drawable/bg_day_active">
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="start|center_vertical"
-                        android:layout_marginStart="6dp"
-                        android:src="@drawable/ic_check_pill"
-                        android:tint="@color/white" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -309,14 +269,16 @@
                     android:id="@+id/windowRangeSlider"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spacing_section_small"
+                    android:layout_marginTop="-16dp"
                     android:valueFrom="0"
                     android:valueTo="120"
                     android:stepSize="5"
                     app:haloColor="@android:color/transparent"
-                    app:thumbTint="@color/lavender_500"
-                    app:trackColorActive="@color/lavender_500"
-                    app:trackColorInactive="@color/lavender_200"
+                    app:thumbColor="@color/lavender_500"
+                    app:thumbRadius="12dp"
+                    app:trackColorActive="@android:color/transparent"
+                    app:trackColorInactive="@android:color/transparent"
+                    app:trackHeight="4dp"
                     app:values="@array/window_range_values" />
             </LinearLayout>
 
