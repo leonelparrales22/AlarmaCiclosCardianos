@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingStart="@dimen/padding_screen_horizontal"
+    android:paddingEnd="@dimen/padding_screen_horizontal"
+    android:paddingTop="@dimen/padding_screen_vertical"
+    android:paddingBottom="@dimen/padding_screen_vertical">
+
+    <ImageButton
+        android:id="@+id/errorBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/spacing_section_xsmall"
+        android:contentDescription="@string/config_back"
+        android:src="@drawable/ic_arrow_left"
+        android:tint="@color/ink_900"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/errorContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_section_large"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/errorActionButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/errorHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.2"
+            android:text="@string/error_header"
+            android:textAllCaps="true"
+            android:textColor="@color/ink_500"
+            android:textSize="@dimen/text_size_summary_header"
+            android:fontFamily="@font/ibm_plex_sans" />
+
+        <FrameLayout
+            android:layout_width="@dimen/error_icon_container_size"
+            android:layout_height="@dimen/error_icon_container_size"
+            android:layout_marginTop="@dimen/spacing_section_xlarge"
+            android:background="@drawable/bg_error_icon_ring">
+
+            <ImageView
+                android:layout_width="@dimen/error_icon_inner_size"
+                android:layout_height="@dimen/error_icon_inner_size"
+                android:layout_gravity="center"
+                android:contentDescription="@string/error_header"
+                android:src="@drawable/ic_sleep_warning" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/errorTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_section_large"
+            android:gravity="center"
+            android:text="@string/error_title"
+            android:textColor="@color/ink_900"
+            android:textSize="@dimen/text_size_error_title"
+            android:fontFamily="@font/space_grotesk" />
+
+        <TextView
+            android:id="@+id/errorDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_section_small"
+            android:gravity="center"
+            android:text="@string/error_description"
+            android:textColor="@color/ink_600"
+            android:textSize="@dimen/text_size_sleep_hint"
+            android:fontFamily="@font/ibm_plex_sans" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/errorActionButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height_large"
+        android:layout_marginTop="@dimen/spacing_section_large"
+        android:text="@string/error_action"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_button"
+        android:fontFamily="@font/ibm_plex_sans"
+        android:backgroundTint="@color/ink_900"
+        app:cornerRadius="@dimen/radius_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

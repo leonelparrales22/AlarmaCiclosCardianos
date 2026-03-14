@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AlarmaCiclosCircadianos">
         <activity android:name=".ui.summary.SummaryActivity" />
+        <activity android:name=".ui.error.ErrorActivity" />
         <activity android:name=".ui.alarm.SmartAlarmActivity" />
         <activity android:name=".ui.sleep.SleepActivity" />
         <activity android:name=".ui.config.ConfigActivity" />

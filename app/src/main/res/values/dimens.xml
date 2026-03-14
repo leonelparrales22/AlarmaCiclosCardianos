@@ -20,6 +20,8 @@
     <dimen name="config_chip_padding_horizontal">20dp</dimen>
     <dimen name="config_chip_spacing">8dp</dimen>
     <dimen name="config_day_size">44dp</dimen>
+    <dimen name="error_icon_container_size">128dp</dimen>
+    <dimen name="error_icon_inner_size">64dp</dimen>
 
     <dimen name="button_height_large">56dp</dimen>
     <dimen name="status_card_padding_vertical">16dp</dimen>
@@ -87,4 +89,5 @@
     <dimen name="text_size_emotion_icon">24sp</dimen>
     <dimen name="text_size_chip_label">12sp</dimen>
     <dimen name="text_size_limit_value">24sp</dimen>
+    <dimen name="text_size_error_title">18sp</dimen>
 </resources>

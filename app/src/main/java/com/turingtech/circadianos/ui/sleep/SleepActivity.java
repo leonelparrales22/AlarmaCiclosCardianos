@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.button.MaterialButton;
 import com.turingtech.circadianos.R;
 import com.turingtech.circadianos.ui.alarm.SmartAlarmActivity;
+import com.turingtech.circadianos.ui.error.ErrorActivity;
 
 public class SleepActivity extends AppCompatActivity {
 
@@ -32,6 +33,6 @@ public class SleepActivity extends AppCompatActivity {
                 startActivity(new Intent(SleepActivity.this, SmartAlarmActivity.class)));
 
         reviewPermissions.setOnClickListener(v ->
-                Toast.makeText(this, R.string.sleep_warning_action, Toast.LENGTH_SHORT).show());
+                startActivity(new Intent(SleepActivity.this, ErrorActivity.class)));
     }
 }

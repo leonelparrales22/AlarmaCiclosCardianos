@@ -27,6 +27,12 @@
     <string name="action_save">Guardar</string>
     <string name="action_go_sleep_mode">Ir a Modo Sueño</string>
 
+    <!-- Error screen -->
+    <string name="error_header">Error crítico</string>
+    <string name="error_title">Permisos de micrófono y sensores denegados</string>
+    <string name="error_description">Activa los permisos para registrar tu sueño con precisión y mantener la Smart Alarm activa.</string>
+    <string name="error_action">Ir a ajustes</string>
+
     <!-- Sleep mode screen -->
     <string name="sleep_title">Modo Sueño</string>
     <string name="sleep_menu_placeholder">◦</string>
